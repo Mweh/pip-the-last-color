@@ -4,6 +4,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 final class GameScene: SKScene {
     
@@ -127,6 +128,7 @@ final class GameScene: SKScene {
         for enemy in enemies {
             enemy.moveToward(pip.position, deltaTime: dt)
             enemy.clamp(within: arenaRect)
+            consumeTileUnderEnemy(enemy)
         }
         
         // Check collision
@@ -305,6 +307,9 @@ final class GameScene: SKScene {
         gameState = .gameOver
         previousTouchLocation = nil
         
+        // Heavy haptic feedback for game over
+        UINotificationFeedbackGenerator().notificationOccurred(.error)
+        
         // Freeze enemies and player visually
         isPaused = false // Keep scene responsive for restart
         
@@ -399,6 +404,32 @@ final class GameScene: SKScene {
         tile.run(SKAction.sequence([colorize, scaleUp, scaleDown]))
         
         scoreLabelNode.text = "\(score)"
+        
+        // Score label pop
+        let scoreScaleUp = SKAction.scale(to: 1.2, duration: 0.05)
+        let scoreScaleDown = SKAction.scale(to: 1.0, duration: 0.1)
+        scoreLabelNode.run(SKAction.sequence([scoreScaleUp, scoreScaleDown]))
+        
+        // Light haptic tap for satisfying color restore
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+    }
+    
+    private func consumeTileUnderEnemy(_ enemy: Enemy) {
+        guard let pos = tilePosition(for: enemy.position) else { return }
+        guard tileStates[pos.col][pos.row] == .restored else { return }
+        
+        tileStates[pos.col][pos.row] = .faded
+        
+        let tile = tileNodes[pos.col][pos.row]
+        
+        let scaleDown = SKAction.scale(to: 0.95, duration: 0.05)
+        let fadeAction = SKAction.run { [weak self, weak tile] in
+            guard let self = self, let t = tile else { return }
+            self.applyFadedAppearance(to: t)
+        }
+        let scaleUp = SKAction.scale(to: 1.0, duration: 0.08)
+        
+        tile.run(SKAction.sequence([scaleDown, fadeAction, scaleUp]))
     }
     
     // MARK: - Touch Handling
