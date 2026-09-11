@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		9F3C705B3053F896001A4F67 /* pip: the last color.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pip: the last color.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3C705B3053F896001A4F67 /* PipTheLastColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipTheLastColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9F3C705D3053F896001A4F67 /* pip: the last color */ = {
+		9F3C705D3053F896001A4F67 /* PipTheLastColor */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "pip: the last color";
+			path = PipTheLastColor;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		9F3C70523053F896001A4F67 = {
 			isa = PBXGroup;
 			children = (
-				9F3C705D3053F896001A4F67 /* pip: the last color */,
+				9F3C705D3053F896001A4F67 /* PipTheLastColor */,
 				9F3C705C3053F896001A4F67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		9F3C705C3053F896001A4F67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F3C705B3053F896001A4F67 /* pip: the last color.app */,
+				9F3C705B3053F896001A4F67 /* PipTheLastColor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F3C705A3053F896001A4F67 /* pip: the last color */ = {
+		9F3C705A3053F896001A4F67 /* PipTheLastColor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F3C70663053F897001A4F67 /* Build configuration list for PBXNativeTarget "pip: the last color" */;
+			buildConfigurationList = 9F3C70663053F897001A4F67 /* Build configuration list for PBXNativeTarget "PipTheLastColor" */;
 			buildPhases = (
 				9F3C70573053F896001A4F67 /* Sources */,
 				9F3C70583053F896001A4F67 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9F3C705D3053F896001A4F67 /* pip: the last color */,
+				9F3C705D3053F896001A4F67 /* PipTheLastColor */,
 			);
-			name = "pip: the last color";
+			name = PipTheLastColor;
 			packageProductDependencies = (
 			);
-			productName = "pip: the last color";
-			productReference = 9F3C705B3053F896001A4F67 /* pip: the last color.app */;
+			productName = PipTheLastColor;
+			productReference = 9F3C705B3053F896001A4F67 /* PipTheLastColor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F3C70563053F896001A4F67 /* Build configuration list for PBXProject "pip: the last color" */;
+			buildConfigurationList = 9F3C70563053F896001A4F67 /* Build configuration list for PBXProject "PipTheLastColor" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F3C705A3053F896001A4F67 /* pip: the last color */,
+				9F3C705A3053F896001A4F67 /* PipTheLastColor */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +253,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pip: The Last Color";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +285,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pip: The Last Color";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F3C70563053F896001A4F67 /* Build configuration list for PBXProject "pip: the last color" */ = {
+		9F3C70563053F896001A4F67 /* Build configuration list for PBXProject "PipTheLastColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F3C70643053F897001A4F67 /* Debug */,
@@ -318,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F3C70663053F897001A4F67 /* Build configuration list for PBXNativeTarget "pip: the last color" */ = {
+		9F3C70663053F897001A4F67 /* Build configuration list for PBXNativeTarget "PipTheLastColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F3C70673053F897001A4F67 /* Debug */,
